@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: net.guides.springboot2.springboot2jpacrudexample.SchedulerApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.169 s <<< FAILURE! - in net.guides.springboot2.springboot2jpacrudexample.SchedulerApplicationTests
+net.guides.springboot2.springboot2jpacrudexample.SchedulerApplicationTests  Time elapsed: 0.168 s  <<< ERROR!
+java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
+
