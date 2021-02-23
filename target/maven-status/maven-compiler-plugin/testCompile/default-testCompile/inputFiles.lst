@@ -1,1 +1,16 @@
-D:\workspaceTest\scheduler\src\test\java\net\guides\springboot2\springboot2jpacrudexample\SchedulerApplicationTests.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\util\JSONFileReaderTests.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\job\jobTest.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\dao\faceclockin\FDAccessLogDaoTest.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\dao\tiptop\MdCprFileRepositoryTest.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\ClockinDataInportT100Test.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\service\t100\MdClockinDataIntegrationServiceTest.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\dao\tiptop\CpfFileRepositoryTest.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\dao\tiptop\FlyCprFileRepositoryTest.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\dao\BaseDaoTests.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\dao\tiptop\CqrFileDaoTest.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\service\t100\ClockinDataIntegrationServiceTest.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\service\t100\FlyClockinDataIntegrationServiceTest.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\service\tiptop\CqrFileServiceTest.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\BeanEventTest.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\SchedulerApplicationTests.java
+D:\workspaceTest\scheduler\src\test\java\com\vp\scheduler\service\faceclockin\FDAccLogServiceTest.java
