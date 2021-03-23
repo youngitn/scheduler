@@ -27,7 +27,7 @@ public class jobTest {
 		Date date = new Date();
 //
 //		// 欲轉換的日期字串
-		String dateString = "2021-02-22";
+		String dateString = "2021-03-21";
 		// 設定日期格式
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		// 進行轉換
@@ -39,7 +39,7 @@ public class jobTest {
 		allStr += service.getStrByDate(date);
 		////allStr += service.getStrByDate(sdf.parse(ld.plusDays(-1).toString("yyyy-MM-dd")));
 		////service.write(allStr,ld.toString("yyyyMMdd"));
-		service.write(allStr,ld.toString("20210222"));
+		service.write(allStr,ld.toString("20210321"));
 		//service.run(sdf.parse(ld.plusDays(-1).toString("yyyy-MM-dd")));
 	}
 }

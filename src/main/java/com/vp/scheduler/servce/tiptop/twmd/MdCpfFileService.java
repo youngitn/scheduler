@@ -17,10 +17,12 @@ public class MdCpfFileService implements FindAllAble{
 	@Autowired
 	MdCpfFileRepository repository;
 
+	//取得MD人事基本資料
 	public List<MdCpfFile> findAll() {
 		return (List<MdCpfFile>) repository.findAll();
 	}
 
+	//創建姓名,工號 MAP
 	public Map<String, String> getEmpIdNameMap() {
 
 		/* Map<String, String> itemMap = */

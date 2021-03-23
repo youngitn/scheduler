@@ -30,7 +30,7 @@ public class ClockinService {
 
 	public Map<String, T100Dto> getClockinMap() {
 
-		
+		//打卡資料進入點
 		thisClass.service.setList(thisClass.cqrService.getCqrFileByToday());
 		List<T100Dto> list = thisClass.service.getMappedList();
 

@@ -45,21 +45,21 @@ public class MdClockinDataIntegrationService {
 	 * 返回型別 @throws
 	 */
 	public List<T100Dto> getMappedList() {
-		MdEmpInfo empInfo = MdEmpInfo.getInstance(cpfFileService.findAll(), gemFileService.findAll());
-		Map<String, String> empIdAndDepIdMap = empInfo.getEmpIdAndDepIdMap();
-		Map<String, String> empIdAndNameMap = empInfo.getEmpIdAndNameMap();
-		Map<String, String> depIdAndDepNameMap = empInfo.getDepIdAndDepNameMap();
+		//MdEmpInfo empInfo = MdEmpInfo.getInstance(cpfFileService.findAll(), gemFileService.findAll());
+//		Map<String, String> empIdAndDepIdMap = empInfo.getEmpIdAndDepIdMap();
+//		Map<String, String> empIdAndNameMap = empInfo.getEmpIdAndNameMap();
+//		Map<String, String> depIdAndDepNameMap = empInfo.getDepIdAndDepNameMap();
 		List<T100Dto> t100DtoList = new ArrayList<T100Dto>();
 		inputList.forEach((i) -> {
 			// DepId
-			String depId = empIdAndDepIdMap.get(i.getCqr01());
-
+//			String depId = empIdAndDepIdMap.get(i.getCqr01());
+			String depId ="";
 			// EmpName
-			String empName = empIdAndNameMap.get(i.getCqr01());
-
+//			String empName = empIdAndNameMap.get(i.getCqr01());
+			String empName ="";
 			// DepName
-			String depName = depIdAndDepNameMap.get(depId);
-
+//			String depName = depIdAndDepNameMap.get(depId);
+			String depName = "";
 			t100DtoList.add(new T100Dto(i.getCqr01(), empName, depId, depName, i.getCqr02(), i.getCqr03(),
 					i.getCqrno1(), "TWMD","TIPTOP"));
 
