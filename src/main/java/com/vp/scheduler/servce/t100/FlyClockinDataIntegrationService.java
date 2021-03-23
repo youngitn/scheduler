@@ -46,22 +46,22 @@ public class FlyClockinDataIntegrationService {
 	 * 返回型別 @throws
 	 */
 	public List<T100Dto> getMappedList() {
-		//FlyEmpInfo empInfo = FlyEmpInfo.getInstance(cpfFileService.findAll(), gemFileService.findAll());
-//		Map<String, String> empIdAndDepIdMap = empInfo.getEmpIdAndDepIdMap();
-//		Map<String, String> empIdAndNameMap = empInfo.getEmpIdAndNameMap();
-//		Map<String, String> depIdAndDepNameMap = empInfo.getDepIdAndDepNameMap();
+		FlyEmpInfo empInfo = FlyEmpInfo.getInstance(cpfFileService.findAll(), gemFileService.findAll());
+		Map<String, String> empIdAndDepIdMap = empInfo.getEmpIdAndDepIdMap();
+		Map<String, String> empIdAndNameMap = empInfo.getEmpIdAndNameMap();
+		Map<String, String> depIdAndDepNameMap = empInfo.getDepIdAndDepNameMap();
 		List<T100Dto> t100DtoList = new ArrayList<T100Dto>();
 		inputList.forEach((i) -> {
 			// DepId
-			String depId = "";
-//			String depId = empIdAndDepIdMap.get(i.getCqr01());
+//			String depId = "";
+			String depId = empIdAndDepIdMap.get(i.getCqr01());
 
 			// EmpName
-//			String empName = empIdAndNameMap.get(i.getCqr01());
-			String empName ="";
+			String empName = empIdAndNameMap.get(i.getCqr01());
+//			String empName ="";
 			// DepName
-//			String depName = depIdAndDepNameMap.get(depId);
-			String depName = "";
+			String depName = depIdAndDepNameMap.get(depId);
+//			String depName = "";
 			t100DtoList.add(new T100Dto(i.getCqr01(), empName, depId, depName, i.getCqr02(), i.getCqr03(),
 					i.getCqrno1(), "TWFLY","TIPTOP"));
 
