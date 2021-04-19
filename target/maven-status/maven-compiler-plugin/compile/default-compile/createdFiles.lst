@@ -52,6 +52,7 @@ com\vp\scheduler\servce\BaseService.class
 com\vp\scheduler\dao\t100\OrdermealucRepository.class
 com\vp\scheduler\entity\account\T100Account.class
 com\vp\scheduler\dao\tiptop\twfly\FlyGemFileRepository.class
+com\vp\scheduler\entity\tiptop\twvp\CqrPk.class
 com\vp\scheduler\dao\tiptop\twmd\MdGemFileRepository.class
 com\vp\scheduler\entity\Attributes.class
 com\vp\scheduler\entity\t100\OrdermealucKeys.class

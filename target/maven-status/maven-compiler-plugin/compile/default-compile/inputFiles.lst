@@ -6,6 +6,7 @@ D:\workspaceTest\scheduler\src\main\java\com\vp\scheduler\servce\t100\FlyClockin
 D:\workspaceTest\scheduler\src\main\java\com\vp\scheduler\entity\quote\T100Quote.java
 D:\workspaceTest\scheduler\src\main\java\com\vp\scheduler\servce\t100\ClockinDataIntegrationService.java
 D:\workspaceTest\scheduler\src\main\java\com\vp\scheduler\vo\GemFileVo.java
+D:\workspaceTest\scheduler\src\main\java\com\vp\scheduler\entity\tiptop\twvp\CqrPk.java
 D:\workspaceTest\scheduler\src\main\java\com\vp\scheduler\dao\CustomerRepository.java
 D:\workspaceTest\scheduler\src\main\java\com\vp\scheduler\entity\quote\SFQuote.java
 D:\workspaceTest\scheduler\src\main\java\com\vp\scheduler\entity\account\SFAccount.java

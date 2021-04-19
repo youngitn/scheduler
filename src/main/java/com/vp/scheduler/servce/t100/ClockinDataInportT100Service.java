@@ -15,8 +15,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.vp.scheduler.dao.t100.OrdermealucRepository;
+import com.vp.scheduler.dao.tiptop.twvp.CqrFileRepository;
 import com.vp.scheduler.dto.t100.T100Dto;
 import com.vp.scheduler.entity.t100.Ordermealuc_t;
+import com.vp.scheduler.entity.tiptop.twvp.CqrFile;
 import com.vp.scheduler.servce.faceclockin.FDAccLogService;
 import com.vp.scheduler.servce.tiptop.twfly.FlyClockinService;
 import com.vp.scheduler.servce.tiptop.twmd.MdClockinService;
@@ -31,6 +33,9 @@ public class ClockinDataInportT100Service {
 
 	@Autowired
 	OrdermealucRepository ordermealucDao;
+	
+	@Autowired
+	CqrFileRepository cqrDao;
 
 	public static ClockinDataInportT100Service thisClass;
 
@@ -73,6 +78,24 @@ public class ClockinDataInportT100Service {
 			String sec = "";
 			if (!"NEW_FACE".equals(v.getSource())) {
 				sec = ":00";
+				
+			}
+			///將新人臉打卡資料匯入TIPTOP
+			else {
+				
+				thisClass.cqrDao.save(new CqrFile(
+						v.getEmpId(),
+						v.getClockinDate(),
+						v.getClockinTime().substring(0, 5),
+						v.getClockinDate(),
+						"Y",
+						"Y",
+						"I1399X",
+						"3900",
+						v.getClockinDate(),
+						("0".equals(v.getMealCode()))?"":v.getMealCode(),
+						""
+						));
 			}
 			clockinDatetime = Timestamp.valueOf(sdf.format(v.getClockinDate()) + " " + v.getClockinTime() + sec);
 			ordermealuc_tList.add(new Ordermealuc_t(100, v.getCpyId(), v.getEmpId(), v.getEmpName(), v.getDepId(),
@@ -91,6 +114,7 @@ public class ClockinDataInportT100Service {
 					+ v.getOrdermealuc005() + " " + v.getOrdermealuc006() + " " + v.getOrdermealuc007() + " "
 					+ v.getOrdermealuc008());
 			thisClass.ordermealucDao.save(v);
+			
 		});
 
 //		if (ordermealuc_tList.size() > 0) {

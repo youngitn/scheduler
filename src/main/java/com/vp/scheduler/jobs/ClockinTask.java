@@ -35,7 +35,7 @@ public class ClockinTask {
 	* @return void    返回型別 
 	* @throws
 	 */
-	@Scheduled(cron = "0 15 9 * * ?")
+	@Scheduled(cron = "0 55 8 * * ?")
 	public void importClockinDataToT100Table() {
 		System.out.println("GO");
 		ClockinDataInportT100Service service = (ClockinDataInportT100Service) ApplicationContextUtil
@@ -54,7 +54,7 @@ public class ClockinTask {
 	* @return void    返回型別 
 	* @throws
 	 */
-	@Scheduled(cron = "0 15 9 * * ?")
+	@Scheduled(cron = "0 55 8 * * ?")
 	public void importClockinDataToHRsys() throws IOException, ParseException, InterruptedException {
 		System.out.println("importClockinDataToHRsys");
 		DateTime ld = new DateTime();

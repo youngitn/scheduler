@@ -108,15 +108,20 @@ public class FDAccLogService {
 				JSONObject json = gson.fromJson(i.getData(), JSONObject.class);
 
 				MemberInfo data = gson.fromJson(json.get("member_info").toString(), MemberInfo.class);
-
+				String mealCode = "";
+				if ( json.get("meal") != null) {
+					mealCode = ""+(int)Double.parseDouble(json.get("meal")+"");
+					
+				}
+				
 				// 設定日期格式
 				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-
+				
 				String depId = empIdAndDepIdMap.get(data.getMember_id());
 				String depName = depIdAndDepNameMap.get(depId);
 				if (data.getMember_id() != null) {
 					t100list.add(new T100Dto(data.getMember_id(), data.getName(), depId, depName,
-							sdf.parse(i.getCreatedAt()), i.getCreatedAt().split(" ")[1], data.getMeal(),
+							sdf.parse(i.getCreatedAt()), i.getCreatedAt().split(" ")[1],mealCode,
 							data.getGroup_name(), "NEW_FACE"));
 				}
 
